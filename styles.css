@@ -64,9 +64,13 @@ body {
   padding: 0.5rem 1rem !important;
 }
 
-.hero {
-  background-color: #f9fafb;
+.hero-section {
+  background-color: #F1F3F7;
   text-align: center;
+  padding: 7rem 0;
+}
+
+.hero {
   padding: 5rem 2rem;
 }
 
@@ -75,14 +79,14 @@ body {
   font-weight: 700;
   color: #6b7280;
   max-width: 800px;
-  margin: 0 auto 1rem;
+  margin: 0 auto 3rem;
 }
 
 .hero p {
   font-size: 1rem;
   color: #6b7280;
   max-width: 800px;
-  margin: 0 auto 2rem;
+  margin: 0 auto 4rem;
   line-height: 1.6;
 }
 
@@ -90,34 +94,35 @@ body {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  margin: 4rem 0;
-}
-
-.feature-section {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-  padding: 4rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  flex-wrap: wrap;
 }
 
 .feature-content {
-  flex: 1 1 45%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6rem;
+  padding: 5rem 2rem;
 }
 
-.feature-content h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #6b7280;
+.feature-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.feature {
+  width: 100%;
+}
+
+.feature h2 {
+  font-size: 2.75rem;
+  font-weight: 800;
+  color: #6D758F;
   margin-bottom: 1rem;
 }
 
-.feature-content p {
-  font-size: 1rem;
+.feature p {
+  font-size: 0.8rem;
   color: #6b7280;
   margin-bottom: 2rem;
   line-height: 1.6;
@@ -128,13 +133,23 @@ body {
   gap: 1rem;
 }
 
-.feature-image {
-  flex: 1 1 45%;
-  display: flex;
-  justify-content: center;
+.feature-buttons button {
+  font-size: 12px !important;
 }
 
-.image-placeholder {
+.feature-right {
+  background-color: #F1F3F7;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feature-image img {
+  width: 3.5rem;
+}
+
+/* .image-placeholder {
   background-color: #f3f4f6;
   padding: 4rem;
   border-radius: 10px;
@@ -147,73 +162,75 @@ body {
   width: 48px;
   height: 48px;
   opacity: 0.7;
-}
+} */
 
 .stats-section {
-  padding: 60px 20px;
   text-align: center;
+  background-color: #F8FAFF;
 }
 
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
+.stats {
+  padding: 5rem 2rem;
 }
 
-.title {
-  font-size: 28px;
-  font-weight: 700;
-  color: #4a5173;
-  margin-bottom: 10px;
+.stats-header {
+  max-width: 427px;
+  margin: 0 auto 1.75rem;
 }
 
-.subtitle {
-  color: #7a80a2;
+.stats-header .title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #6D758F;
+  margin-bottom: 1rem;
+}
+
+.stats-header .subtitle {
+  color: #6D758F;
   margin-bottom: 40px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 16px;
+  max-width: 500px;
+  font-size: 1rem;
 }
 
-.cards {
+.stats-cards {
   background-color: #6a738f;
   border-radius: 8px;
-  padding: 40px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  padding: 3.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
   justify-content: space-around;
 }
 
-.card {
+.stats-cards .card {
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  padding: 20px;
+  border: 1px solid #B4B9C9;
+  padding: 1.75rem 1.25rem;
   border-radius: 8px;
   color: white;
-  flex: 1 1 250px;
-  max-width: 300px;
+  max-width: 100%;
   text-align: left;
 }
 
-.stat {
-  font-size: 26px;
+.stats-cards .card .stat {
+  display: flex;
+  font-size: 36px;
   font-weight: bold;
-  margin-bottom: 5px;
+  margin: 1.2rem 0;
 }
 
-.label {
+.stats-cards .card .label {
   font-weight: bold;
   margin-bottom: 10px;
 }
 
-.desc {
+.stats-cards .card .desc {
   font-size: 14px;
   margin-bottom: 15px;
   line-height: 1.4;
 }
 
-.link {
+.stats-cards .card .link {
   color: white;
   text-decoration: none;
   font-weight: bold;
@@ -221,6 +238,8 @@ body {
   align-items: center;
   gap: 4px;
 }
+
+/* Bento grid implementation */
 
 .gallery-section {
   padding: 60px 20px;
@@ -260,14 +279,14 @@ body {
   aspect-ratio: 1 / 1.6;
 }
 
-.image-placeholder {
+/* .image-placeholder {
   font-size: 24px;
   border: 1px solid #cbd5e1;
   padding: 20px;
   border-radius: 8px;
   background-color: #fff;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-}
+} */
 
 .services-section {
   padding: 60px 20px;
