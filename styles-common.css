@@ -38,3 +38,11 @@
   font-size: 1rem;
 }
 
+.break-line {
+  border: 0.05em solid #C1C7CD;
+  width: 100%;
+}
+
+.copyright {
+  font-size: 12px;
+}
