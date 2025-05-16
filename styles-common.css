@@ -24,3 +24,17 @@
   cursor: pointer;
 }
 
+.title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #6D758F;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  color: #6D758F;
+  margin-bottom: 40px;
+  max-width: 500px;
+  font-size: 1rem;
+}
+
