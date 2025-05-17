@@ -203,6 +203,10 @@
   gap: 4px;
 }
 
+.stats-cards .card .link img {
+  width: 13px !important;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
